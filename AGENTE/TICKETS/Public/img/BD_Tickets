@@ -1,0 +1,180 @@
+DROP database tickets;
+
+CREATE database tickets;
+
+use tickets;
+
+CREATE TABLE Tema(
+	Id_Tema int PRIMARY KEY AUTO_INCREMENT,
+	Nombre Varchar(50) not null
+);
+
+CREATE TABLE Tipo_Dep(
+	Id_type int PRIMARY KEY AUTO_INCREMENT,
+	Nombre Varchar(50) not null
+);
+
+CREATE TABLE Estado (
+	Id_status int PRIMARY KEY AUTO_INCREMENT,
+	Tipo Varchar(10) not null
+);
+
+CREATE TABLE Departamento (
+	Id_Departamento int PRIMARY KEY AUTO_INCREMENT,
+ 	Nombre varchar(50),
+	Correo varchar (50),
+	Id_status int ,
+	Id_type int,
+	Id_Agente int,
+	Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Rol(
+	Id_Rol int PRIMARY KEY AUTO_INCREMENT,
+	Tipo varchar(40)
+);
+
+CREATE TABLE Equipos_config (
+	Id_Equipo int PRIMARY KEY AUTO_INCREMENT,
+ 	Nombre varchar(50)
+);
+
+CREATE TABLE Usuarios (
+	Id_Agente int PRIMARY KEY AUTO_INCREMENT,
+	Nombre varchar(35),
+	Apellidos varchar(35),
+	Email varchar (55),
+	Password varchar(35),
+	Id_Rol int,
+	Id_status int,
+	Id_Departamento int,
+	fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Equipos (
+	Id_Equipo int,
+ 	Id_Agente int
+);
+
+CREATE TABLE Ticket (
+	Id_Ticket int PRIMARY KEY AUTO_INCREMENT,
+  	Id_Agente int,
+  	Id_Equipo int,
+   	Id_Departamento int,
+   	Id_status int,
+   	Id_Tema int,
+   	Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   	Asunto varchar(25),
+    	Nota_Inter varchar(800)
+);
+
+
+CREATE TABLE Tarea (
+	Id_Tarea int PRIMARY KEY AUTO_INCREMENT,
+	Titulo varchar(25),
+	Descripcion varchar(800),
+	Id_Agente int,
+  	Id_Equipo int,
+  	Id_Departamento int,
+  	Id_status int,
+	Entrega TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+alter table Usuarios add foreign key (Id_status) references Estado (Id_status);
+
+alter table Usuarios add foreign key (Id_Rol) references Rol (Id_Rol);
+
+alter table Usuarios add foreign key (Id_Departamento) references Departamento (Id_Departamento);
+
+alter table Departamento add foreign key (Id_status) references Estado (Id_status);
+
+alter table Departamento add foreign key (Id_type) references Tipo_Dep (Id_type);
+
+alter table Departamento add foreign key (Id_Agente) references Usuarios (Id_Agente);
+
+alter table Equipos add foreign key (Id_Equipo) references Equipos_config (Id_Equipo);
+
+alter table Equipos add foreign key (Id_Agente) references Usuarios (Id_Agente);
+
+alter table Ticket add foreign key (Id_Agente) references Usuarios (Id_Agente);
+
+alter table Ticket add foreign key (Id_Equipo) references Equipos_config (Id_Equipo);
+
+alter table Ticket add foreign key  (Id_Departamento) references Departamento (Id_Departamento);
+
+alter table Ticket add foreign key (Id_status) references Estado (Id_status);
+
+alter table Ticket add foreign key (Id_Tema) references Tema (Id_Tema);
+
+alter table Tarea add foreign key (Id_Agente) references Usuarios (Id_Agente);
+
+alter table Tarea add foreign key (Id_Equipo) references Equipos_config (Id_Equipo);
+
+alter table Tarea add foreign key (Id_Departamento) references Departamento (Id_Departamento);
+
+alter table Tarea add foreign key (Id_status) references Estado (Id_status);
+
+
+INSERT INTO Estado(Tipo) VALUES('Abiertos');
+INSERT INTO Estado(Tipo) VALUES('Resueltos');
+INSERT INTO Estado(Tipo) VALUES('Cerrados');
+INSERT INTO Estado(Tipo) VALUES('Atrasado');
+INSERT INTO Estado(Tipo) VALUES('Activo');
+INSERT INTO Estado(Tipo) VALUES('Inactivo');
+
+
+INSERT INTO Rol(Tipo) VALUES('Agente');
+INSERT INTO Rol(Tipo) VALUES('Invitado');
+INSERT INTO Rol(Tipo) VALUES('Administrador');
+
+
+
+INSERT INTO Tipo_Dep(Nombre) VALUES('Publico');
+INSERT INTO Tipo_Dep(Nombre) VALUES('Privado');
+
+
+
+INSERT INTO Tema(Nombre) VALUES('Consulta General');
+INSERT INTO Tema(Nombre) VALUES('Academias');
+INSERT INTO Tema(Nombre) VALUES('Desarrollo de Asignaturas');
+INSERT INTO Tema(Nombre) VALUES('Proyecto Educacion Dual Y a Distancia');
+INSERT INTO Tema(Nombre) VALUES('Servicios Estudiantiles');
+INSERT INTO Tema(Nombre) VALUES('Sistema SICEA / SIGA');
+INSERT INTO Tema(Nombre) VALUES('Tutorias');
+
+
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Academias','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('General','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Servicios Estudiantiles','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Soporte Consulta General','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Soporte SEAD','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Soporte Desarrollo de Asignaturas','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Soporte Materias en Linea','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Soporte Plataforma de Aprendizaje','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Soporte Educacion Dual y a Distancia','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+INSERT INTO Departamento(Nombre,Correo,Id_status,Id_type,Id_Agente) VALUES('Soporte Sistema SICEA / SIGA','asesorenlinea@utpuebla.edu.mx',5,1,Null);
+
+
+
+INSERT INTO Usuarios(Nombre,Apellidos,Email,Password,Id_Rol,Id_status,Id_Departamento) VALUES ('Francisco ', 'Merino Zavaleta', 'utp0139968@alumno.utpuebla.edu.mx',MD5('platanito12') ,1,5,10);
+
+INSERT INTO Usuarios(Nombre,Apellidos,Email,Password,Id_Rol,Id_status,Id_Departamento) VALUES ('Jose ', 'Rodrigez Ramos', 'utp084498@alumno.utpuebla.edu.mx',MD5('platanito12') ,3,5,10);
+
+
+
+INSERT INTO Ticket(Id_Agente,Id_Equipo,Id_Departamento,Id_status,Id_Tema,Asunto,Nota_Inter) VALUES (1, NULL, 10, 1, 1,'PRUEBA', 'Este es el primer ticket de prueba ');
+
+
+INSERT INTO Equipos_config(Nombre) VALUES ('Equipo Prueba');
+
+INSERT INTO Equipos(Id_Equipo,Id_Agente) VALUES (1,1),(1, 2);
+
+
+INSERT INTO Tarea(Titulo,Descripcion,Id_Agente,Id_Equipo,Id_Departamento,Id_status) VALUES ('prueba', 'esta es un prueba de base de gatos',2, NULL, 10,1);
+
+
+
+
+
+

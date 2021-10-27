@@ -1,0 +1,73 @@
+body{
+    background:  #ddd;
+}
+
+
+
+.container_table{
+
+ width:100%;
+ background: #ddd;
+ margin: 50px auto ;
+ box-shadow:  0 0 20px #333;
+
+ display: grid;
+ grid-template-columns: repeat(10,10%);
+ grid-auto-rows: 50px;
+
+}
+
+.table_title
+{
+  grid-column-start:1 ;
+ grid-column-end: 11;
+
+ background: blue;
+ color:white;
+ display: flex;
+ justify-content:  center;
+ align-items: center;
+ font-weight: bold;
+ font-size: 1.9em;
+
+}
+
+
+
+.table_header, .table_item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.table_header{
+font-weight: bold;
+font-size: 1.5em;
+}
+
+.table_item{
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+
+.dive{
+     font-size: 13px;
+    height:auto;
+    width: 100%;
+    overflow: hidden;
+text-overflow: ellipsis;
+
+  color: black;
+    }
+
+    .formu{
+        margin-bottom:2.5%;
+        margin-top:2.5%;
+        
+       align-items:center;
+       justify-content:center;
+       text-align:center;
+   }
+
+

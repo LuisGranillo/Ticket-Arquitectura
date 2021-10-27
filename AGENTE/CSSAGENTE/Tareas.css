@@ -1,0 +1,38 @@
+/*Creacion el 23 de junio de 2021 */ 
+
+
+#mediana{
+   
+    border-radius: 1em;
+  }
+  #formatos{ 
+      display: none;
+  }
+  #fuentes{ 
+      display: none;
+  }
+  #puntos{ 
+      display: none;
+}  #departamentos{ 
+      display: none;
+  }
+  #temas,#agentes{ 
+      display: none;
+  }
+  #opciones{
+      background-color: rgba(255,255,255,.15);
+      width:190px;
+      -webkit-box-shadow: 0px 0px 0px 30px rgba(255,255,255,0);
+  
+  }
+  textarea{
+      resize: both;
+      max-height: 40%;
+      min-height: 40%;
+      max-width: 100%;
+      min-width: 100%;
+          color: rgb(7, 5, 5);
+        
+  }
+
+

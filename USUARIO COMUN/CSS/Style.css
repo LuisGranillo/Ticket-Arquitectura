@@ -1,0 +1,435 @@
+#premio{ 
+    display: none;
+}
+
+ 
+body{
+    background-color: #ecebef;
+     
+}
+
+ *{
+     margin: 0;
+     padding:0;      
+        font-family: Helvetica Neue; 
+    
+        
+    }
+
+ .main,footer,aside{
+   
+    width: 90%;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+header{
+     width: 90%;
+    margin: auto;
+    max-width: 1000px;
+}  
+.menu{
+
+    width:100%;
+    background: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+.menu li{
+    display: inline-block;
+}
+ 
+
+.menu li a{
+    padding: 10px 50px;
+    color:white;
+    display: inline-block;
+    text-decoration: none;
+}
+.menu li a:hover{
+    background:#ccc;
+    color:#000;
+    text-decoration: none;
+}
+.main .articles{
+    width: 68%;
+    float: left;
+    margin-right: 1.5%;
+ 
+}
+
+.verticket{
+    width: 100%;
+    float: left;
+    
+    background: white;
+    border-radius: 25%;
+
+}
+.main .articles article{
+    padding: 40px;
+    background: white;
+    /*Es como un espacio etnre los elementos */margin-bottom: 4px;
+}
+
+p{
+    font-size: 15px;
+
+    text-align: justify;
+} 
+ 
+
+
+aside{
+    width: 30%;
+    background: white;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+footer{
+    background:black;
+    color: #fff;
+    clear: both;
+    text-align: center;
+    padding: 10px 20px;
+    /* limpia los float y una separacion o salto de linea */
+}
+
+a{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+
+
+    display: inline-block;
+   
+   }
+
+   a h3{
+       color:red;
+   }
+
+
+
+
+   /*//////////////////////////////////*/
+   
+ header nav{
+    overflow: hidden;
+    background: #000;
+}
+
+header nav ul{
+
+    list-style: none;
+ 
+}
+
+header nav ul li{
+
+    list-style: none;
+    float: left;
+ 
+}
+
+ 
+
+
+
+
+header nav ul li a{
+    padding: 10px 20px;
+    display: block;
+    color:#fff;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+ background: #75ACEC;
+
+}
+
+
+#datos{ 
+    display: none;
+}
+
+.formgreen{
+    width: 100%;
+    border-right:solid 10px #000;
+    padding:10%;
+    align-items:center;
+    justify-content:center;    
+    background:green;
+    
+}
+.formgreen1{
+    width: 100%;
+    border-right:solid 10px #000;
+    padding:10%;
+    align-items:center;
+    justify-content:center;    
+    color:#000;
+    background:white;
+    
+}
+
+.formwhite{
+    width: 100%;
+    border-right:solid 10px #000;
+    padding:20%;
+    align-items:center;
+    justify-content:center;    
+    background:white;
+    
+}
+
+label{
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    color:#fff;
+}
+
+input{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align:center;
+ 
+ 
+}
+
+textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #ccc;
+      
+ 
+}
+
+
+ 
+ 
+.inputa
+{ 
+    width:100%;
+     float: center;
+     border:none;
+    margin-bottom:5%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     margin: 10px 5px 10px 5px;
+  
+}
+
+#index{
+    width:67%;
+}
+.formularios
+{    
+
+    width:30%;
+     float: center;
+     border:none;
+    margin-bottom:5%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     margin: 10px 5px 10px 5px;
+  
+}
+
+.rojos
+{    
+  
+    width:30%;
+     float: center;
+     border:none;
+margin-left: 30%;
+margin-top: 3%;
+ 
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+   
+  
+}
+
+input[type="submit"]:hover
+{
+  
+    
+    cursor:pointer;
+}     
+
+.instructions{
+    display: table-cell;
+  
+}
+
+ 
+.eta{
+
+    text-decoration: none;
+    font-size: 15px;
+    hyphens: none;
+    letter-spacing: normal;
+    text-align: justify;
+}
+
+.eta:hover{
+    text-decoration: none;
+    font-size: 15px;
+
+    text-align: justify;
+ 
+
+}
+
+ 
+
+
+
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
+.clear {
+    clear: both;
+    height: 1px;
+    visibility: none;
+}
+
+
+div{
+
+    display: block;
+}
+
+.subtexto{
+
+    height:50%;
+font-size: 15px;
+    text-align: justify;
+    
+    line-height: 1.231;
+} 
+
+
+.imgheader{
+    height:auto;
+    width: 10%;
+    margin:10px ;
+ 
+     
+     
+      }
+
+      /*Nuevos estilos para view ticket*/
+      
+      .a:hover{
+
+        text-decoration: none;
+        /* font-size: 50px;*/
+        box-shadow: 0px 3px 0px #1d64ad;
+        background:#3BA7E1;
+        color: white;
+        }
+        .a{
+        color:#fff;
+        font-size: 15px;
+        background: #1d64ad;
+         color:white;
+         box-shadow: 0px 5px 0px #000;
+        
+        text-decoration: none;
+        padding: 5px 10px 5px;
+         
+        text-align:center;
+        
+        margin-top:3%;
+        }
+                                                      strong {
+          font-weight: bold;
+        }  
+        img {
+          border: 0;
+          vertical-align: middle;
+        } 
+        input {
+          line-height: normal;
+          *overflow: visible;
+        }
+         
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+          cursor: pointer;
+          -webkit-appearance: button;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+          box-sizing: border-box;
+        } 
+        #clientLogin {
+            display: block;
+          margin-top: 20px;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+          background: url('../images/lock.png?1319655200') 95% 50% no-repeat #f6f6f6;
+        } 
+        #clientLogin .instructions {
+            display:table-cell;
+            padding-left: 2em;
+            padding-right:90px;
+        }
+           
+        #clientLogin #email,
+        #clientLogin #ticketno {
+          margin-right: 0;
+        }
+        #clientLogin input[type=text],
+        #clientLogin input[type=password] {
+            padding: 5px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        #clientLogin input[type=submit] {
+            padding: 3px 10px;
+            border-radius: 4px;
+        }  
+        img.sign-in-image {
+            border: none;
+            max-height: 40px;
+            max-width: 200px;
+            width: auto;
+            height: auto;
+        }
+        .login-box {
+            width:40%;
+            display:table-cell;
+            box-shadow: 12px 0 15px -15px rgba(0,0,0,0.4);
+            padding:15px;
+        }
+         

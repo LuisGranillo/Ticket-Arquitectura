@@ -1,0 +1,76 @@
+textarea{
+    resize: both;
+    max-height: 5%;
+    min-height: 3%;
+    max-width: 90%;
+    min-width: 30%;}
+
+
+
+    .enlaces{
+    text-decoration:none;
+     
+ padding: 1% 2%;
+ margin: 1% 4% 1% 2.5%;
+ 
+
+ display: inline-block;
+}
+
+.enlaces:hover{
+    text-decoration: none;
+    color:#000;
+}
+
+
+.menu{
+
+    width:100%;
+    background: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{
+    display: inline-block;
+}
+ 
+
+.menu li a{
+    padding: 10px 50px;
+    color:white;
+    display: inline-block;
+    text-decoration: none;
+}
+.menu li a:hover{
+    background:#ccc;
+    color:#000;
+    text-decoration: none;
+}
+
+
+.menu li div a{
+    padding: 10px 50px;
+    color:black;
+    display: inline-block;
+    text-decoration: none;
+}
+.menu li div a :hover{
+    background:#ccc;
+    color:#000;
+    text-decoration: none;
+}
+.dive{
+ 
+    height:auto;
+    width: 100%;
+    overflow: hidden;
+   text-overflow: ellipsis;
+    }
+ul{
+    padding:0;
+}
+
+ 
+
+

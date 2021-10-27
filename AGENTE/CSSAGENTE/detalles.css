@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+ 
+html,body{
+  color:white;
+  /*font-family:'Opens Sans',helvetica;  */
+  height:100%;
+  width:100%;
+  margin: 0px;
+}
+ #color{
+
+background-color: greenyellow;
+}
+#nom{
+
+    background-color: lightblue;
+    }
+    #d{
+
+        background-color: lightsalmon;
+        }
+.portada{
+   background: url(https://sintesis.com.mx/puebla/wp-content/uploads/2019/03/05AGO2015-AF_12.jpg) no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+ 
+}
+.respuestas{
+    background: url(https://riptac.com.mx/wp-content/uploads/2019/08/utp.jpg) no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100% ;
+    text-align: center;
+  
+ }
+.descrpp{
+   background: url(https://i0.wp.com/heraldodepuebla.com/wp-content/uploads/2021/05/UTP-instalaciones-1.jpg?fit=750%2C500&ssl=1) no-repeat fixed center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   height: 100%;
+   width: 100% ;
+   text-align: center;
+ 
+}
+.text{
+  margin: 30px 0px 30px 0px;	
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  display: inline-block;
+}
